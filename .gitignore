@@ -74,3 +74,5 @@ dkms.conf
 #JetBrains
 
 .idea/
+
+*.cbp

@@ -1,0 +1,18 @@
+if (XXHASH_INCLUDES AND XXHASH_LIBRARIES)
+    set(XXHASH_FIND_QUIETLY TRUE)
+endif (XXHASH_INCLUDES AND XXHASH_LIBRARIES)
+
+find_path(XXHASH_INCLUDES
+        NAMES
+        xxhash.h
+        PATHS
+        $ENV{XXHASHDIR}
+        ${INCLUDE_INSTALL_DIR}
+        )
+
+find_library(XXHASH_LIBRARIES XXHASH PATHS $ENV{XXHASHDIR} ${LIB_INSTALL_DIR})
+
+include(FindPackageHandleStandardArgs)
+find_package_handle_standard_args(XXHASH DEFAULT_MSG
+        XXHASH_INCLUDES XXHASH_LIBRARIES)
+mark_as_advanced(XXHASH_INCLUDES XXHASH_LIBRARIES)
