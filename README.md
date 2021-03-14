@@ -25,7 +25,7 @@ the algorithm guarantees that minimum amount of relocation is required.
 Take look at this:
 
 ```
-> 127.0.0.1:6379> JUMPHASH buraksezer 271
+127.0.0.1:6379> JUMPHASH buraksezer 271
 (integer) 51
 127.0.0.1:6379> JUMPHASH buraksezer 277
 (integer) 51
@@ -34,7 +34,7 @@ Take look at this:
 ## Rationale
 
 It's not possible to implement this algorithm in Lua 5.1 due to lack of bitwise operators. Furthermore, Jump consistent
-hash is quite useful algorithm. As a Redis module, it would be accessible for all your clients.
+hash is a quite useful algorithm. As a Redis module, it would be accessible for all your clients and Lua scripts.
 
 ## Contributions
 
