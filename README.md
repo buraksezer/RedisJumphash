@@ -20,7 +20,7 @@ JUMPHASH <key> <number-of-buckets>
 ```
 
 A successful call returns a bucket for the given key. It doesn't need any storage. If you change the number of buckets,
-the algorithm guarantees that minimum amount of relocation is required.
+the algorithm guarantees minimum amount of relocation is required.
 
 Take look at this:
 
